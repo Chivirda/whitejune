@@ -10,7 +10,8 @@ const files = {
     htmlPath: 'src/**/*.html',
     sassPath: 'src/sass/**/*.scss',
     jsPath: 'src/js/**/*.js',
-    imagePath: 'src/images/**/*'
+    imagePath: 'src/images/**/*',
+    fontPath: 'src/fonts/**/*'
 };
 const sass = gulpSass(dartSass);
 
@@ -41,6 +42,11 @@ function imageTask() {
         .pipe(gulp.dest('dist/images'));
 }
 
+function fontTask() {
+    return gulp.src(files.fontPath)
+        .pipe(gulp.dest('dist/fonts'));
+}
+
 function watchTask() {
     browserSync.init({
         server: {
@@ -52,6 +58,6 @@ function watchTask() {
 }
 
 export default gulp.series(
-    gulp.parallel(htmlTask, sassTask, jsTask, imageTask),
+    gulp.parallel(htmlTask, sassTask, jsTask, imageTask, fontTask),
     watchTask
 );
