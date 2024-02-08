@@ -37,7 +37,7 @@
 .nav-container {
     display: grid;
     grid-gap: 71px;
-    padding-top: 46px;
+    padding-top: 40px;
 }
 
 .nav-menu {
@@ -73,6 +73,7 @@
 
 .main {
     display: grid;
+    padding-top: 40px;
 }
 
 .main-menu {
@@ -92,5 +93,11 @@
     }
     :active {
         color: #a8e1ff;
+    }
+    :hover {
+        color: #a8e1ff;
+    }
+    @media (max-width: 600em) {
+        font-size: 130px;
     }
 }
