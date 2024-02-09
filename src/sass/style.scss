@@ -127,5 +127,52 @@
 
 .governor-text__heading {
     font-size: 60px;
-    // margin-top: 85px;
+    margin-top: 85px;
+}
+
+.governor-text__upper {
+    text-transform: uppercase;
+}
+
+.events {
+    background-color: #f2f2f2;
+    padding: 90px;
+    display: grid;
+}
+
+.events-heading {
+    font-size: 45px;
+    margin-bottom: 75px;
+}
+
+.events-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 70px;
+    justify-items: center;
+}
+
+.events-card {
+    width: 169px;
+    text-transform: uppercase;
+}
+
+.events-card__heading {
+    font-size: 24px;
+}
+
+.events-card__text {
+    font-size: 18px;
+    width: 140px;
+}
+
+.events-all {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin: 50px auto;
+    padding: 17px 50px;
+    border-radius: 50px;
+    display: inline-block;
+    border: 2px solid #000;
+    text-decoration: none;
 }

@@ -4,6 +4,9 @@
   "description": "Тестовое задание по верстке для ГАУ ИКТ АО",
   "main": "index.js",
   "type": "module",
+  "scripts": {
+    "dev": "npx gulp"
+  },
   "keywords": [
     "белый",
     "июнь",
