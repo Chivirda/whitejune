@@ -24,6 +24,10 @@
 .content-wrapper {
     display: grid;
     grid-template-columns: 1fr 3fr;
+
+    @media (max-width: 600px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 .nav {
@@ -73,7 +77,11 @@
 
 .main {
     display: grid;
-    padding-top: 40px;
+    margin-top: 40px;
+
+    @media (max-width: 600px) {
+        margin-top: 200px;
+    }
 }
 
 .main-menu {
@@ -97,8 +105,9 @@
     :hover {
         color: #a8e1ff;
     }
-    @media (max-width: 600em) {
-        font-size: 130px;
+    @media (max-width: 600px) {
+        font-size: 50px;
+        padding: 0 20px;
     }
 }
 
@@ -106,6 +115,11 @@
     display: grid;
     grid-template-columns: 5fr 6fr 1fr;
     padding: 85px 0;
+
+    @media (max-width: 600px) {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0 20px;
+    }
 }
 
 .governor-photo {
@@ -138,12 +152,20 @@
     background-color: #f2f2f2;
     padding: 90px;
     display: grid;
+
+    @media (max-width: 600px) {
+        padding: 20px;
+    }
 }
 
 .events-heading, .partners-heading, .support-heading {
     font-size: 45px;
     margin-bottom: 75px;
     max-width: 500px;
+
+    @media (max-width: 600px) {
+        text-align: center;
+    }
 }
 
 .events-content {
@@ -151,6 +173,10 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 70px;
     justify-items: center;
+    
+    @media (max-width: 600px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 .events-card {
@@ -180,11 +206,18 @@
 
 .partners, .support {
     padding: 90px 0;
+     @media (max-width: 600px) {
+        font-size: 20px;
+        padding: 90px 20px;
+    }
 }
 
 .partners-list, .support-list {
     display: flex;
     flex-wrap: wrap;
+    @media (max-width: 600px) {
+        flex-direction: column;
+    }
 }
 
 .partners-list__item, .support-list__item {
@@ -198,16 +231,6 @@
         width: 150px;
         height: 60px;
     }
-}
 
-.partners-list__item {
-    margin-left: 110px;
-}
-
-.partners-list__item:nth-child(6) {
-    margin-left: 0;
-}
-
-.partners-list__item:nth-child(16) {
-    margin-left: 0;
+    
 }
