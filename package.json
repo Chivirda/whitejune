@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "npx gulp"
+    "dev": "gulp"
   },
   "keywords": [
     "белый",
