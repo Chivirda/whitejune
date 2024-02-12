@@ -5,13 +5,15 @@ import autoprefixer from 'gulp-autoprefixer';
 import concat from 'gulp-concat';
 import imagemin from 'gulp-imagemin';
 import browserSync from 'browser-sync';
+import ghPages from 'gulp-gh-pages'
 
 const files = {
     htmlPath: 'src/**/*.html',
     sassPath: 'src/sass/**/*.scss',
     jsPath: 'src/js/**/*.js',
     imagePath: 'src/images/**/*',
-    fontPath: 'src/fonts/**/*'
+    fontPath: 'src/fonts/**/*',
+    distPath: 'dist/**/*'
 };
 const sass = gulpSass(dartSass);
 
@@ -57,7 +59,14 @@ function watchTask() {
     gulp.watch([files.htmlPath, files.sassPath, files.jsPath], gulp.parallel(htmlTask, sassTask, jsTask)).on('change', browserSync.reload);
 }
 
+function deploy() {
+    return gulp.src(files.distPath)
+        .pipe(ghPages());
+}
+
 export default gulp.series(
     gulp.parallel(htmlTask, sassTask, jsTask, imageTask, fontTask),
     watchTask
 );
+
+export { deploy };
