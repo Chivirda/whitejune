@@ -1,0 +1,241 @@
+@font-face {
+  font-family: "IkaCompact-Normal";
+  src: url("../fonts/IkaCompactTrial-Normal.woff2") format("woff2"), url("../fonts/IkaCompactTrial-Normal.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "IkaCompact-Condensed";
+  src: url("../fonts/IkaCompactTrial-Condensed.woff2") format("woff2"), url("../fonts/IkaCompactTrial-Condensed.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "IkaCompact-Normal", sans-serif;
+  color: #000000;
+}
+
+.content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+@media (max-width: 600px) {
+  .content-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.nav {
+  height: 100vh;
+  display: grid;
+  align-items: start;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.nav-container {
+  display: grid;
+  grid-gap: 71px;
+  padding-top: 40px;
+}
+
+.nav-menu {
+  list-style: none;
+  width: 120px;
+  padding: 0;
+  display: grid;
+  grid-gap: 35px;
+}
+
+.nav-menu__link :hover {
+  text-decoration: underline;
+}
+.nav-menu__link a {
+  text-decoration: none;
+}
+
+.social-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.social-link {
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+.social-link a {
+  text-decoration: none;
+}
+
+.main {
+  display: grid;
+  margin-top: 40px;
+}
+@media (max-width: 600px) {
+  .main {
+    margin-top: 200px;
+  }
+}
+
+.main-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-right: 25%;
+}
+
+.main-menu__link {
+  list-style: none;
+  font-size: 160px;
+  font-family: "IkaCompact-Condensed", sans-serif;
+  text-transform: uppercase;
+}
+.main-menu__link a {
+  text-decoration: none;
+}
+.main-menu__link :active {
+  color: #a8e1ff;
+}
+.main-menu__link :hover {
+  color: #a8e1ff;
+}
+@media (max-width: 600px) {
+  .main-menu__link {
+    font-size: 50px;
+    padding: 0 20px;
+  }
+}
+
+.governor {
+  display: grid;
+  grid-template-columns: 5fr 6fr 1fr;
+  padding: 85px 0;
+}
+@media (max-width: 600px) {
+  .governor {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0 20px;
+  }
+}
+
+.governor-photo {
+  margin-top: 120px;
+}
+
+.governor-photo__caption {
+  font-size: 14px;
+  width: 30%;
+  margin: 0 auto;
+  margin-top: 56px;
+}
+
+.governor-text {
+  display: grid;
+  grid-gap: 38px;
+  font-size: 18px;
+}
+
+.governor-text__heading {
+  font-size: 60px;
+  margin-top: 85px;
+}
+
+.governor-text__upper {
+  text-transform: uppercase;
+}
+
+.events {
+  background-color: #f2f2f2;
+  padding: 90px;
+  display: grid;
+}
+@media (max-width: 600px) {
+  .events {
+    padding: 20px;
+  }
+}
+
+.events-heading, .partners-heading, .support-heading {
+  font-size: 45px;
+  margin-bottom: 75px;
+  max-width: 500px;
+}
+@media (max-width: 600px) {
+  .events-heading, .partners-heading, .support-heading {
+    text-align: center;
+  }
+}
+
+.events-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 70px;
+  justify-items: center;
+}
+@media (max-width: 600px) {
+  .events-content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.events-card {
+  width: 169px;
+  text-transform: uppercase;
+}
+
+.events-card__heading {
+  font-size: 24px;
+}
+
+.events-card__text {
+  font-size: 18px;
+  width: 140px;
+}
+
+.events-all {
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 50px auto;
+  padding: 17px 50px;
+  border-radius: 50px;
+  display: inline-block;
+  border: 2px solid #000;
+  text-decoration: none;
+}
+
+.partners, .support {
+  padding: 90px 0;
+}
+@media (max-width: 600px) {
+  .partners, .support {
+    font-size: 20px;
+    padding: 90px 20px;
+  }
+}
+
+.partners-list, .support-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (max-width: 600px) {
+  .partners-list, .support-list {
+    flex-direction: column;
+  }
+}
+
+.partners-list__item, .support-list__item {
+  display: flex;
+  flex-basis: 10%;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px 50px;
+}
+.partners-list__item img, .support-list__item img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 150px;
+  height: 60px;
+}
