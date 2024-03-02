@@ -86,6 +86,11 @@
   justify-content: space-between;
   margin-right: 25%;
 }
+@media (max-width: 600px) {
+  .main-menu {
+    margin: 0 auto;
+  }
+}
 
 .main-menu__link {
   list-style: none;
@@ -124,6 +129,9 @@
 .governor-photo {
   margin-top: 120px;
 }
+.governor-photo img {
+  max-width: 100%;
+}
 
 .governor-photo__caption {
   font-size: 14px;
@@ -158,13 +166,17 @@
   }
 }
 
-.events-heading, .partners-heading, .support-heading {
+.events-heading,
+.partners-heading,
+.support-heading {
   font-size: 45px;
   margin-bottom: 75px;
   max-width: 500px;
 }
 @media (max-width: 600px) {
-  .events-heading, .partners-heading, .support-heading {
+  .events-heading,
+  .partners-heading,
+  .support-heading {
     text-align: center;
   }
 }
@@ -206,34 +218,40 @@
   text-decoration: none;
 }
 
-.partners, .support {
+.partners,
+.support {
   padding: 90px 0;
 }
 @media (max-width: 600px) {
-  .partners, .support {
+  .partners,
+  .support {
     font-size: 20px;
     padding: 90px 20px;
   }
 }
 
-.partners-list, .support-list {
+.partners-list,
+.support-list {
   display: flex;
   flex-wrap: wrap;
 }
 @media (max-width: 600px) {
-  .partners-list, .support-list {
+  .partners-list,
+  .support-list {
     flex-direction: column;
   }
 }
 
-.partners-list__item, .support-list__item {
+.partners-list__item,
+.support-list__item {
   display: flex;
   flex-basis: 10%;
   justify-content: center;
   align-items: center;
   margin: 0 20px 50px;
 }
-.partners-list__item img, .support-list__item img {
+.partners-list__item img,
+.support-list__item img {
   -o-object-fit: contain;
      object-fit: contain;
   width: 150px;
